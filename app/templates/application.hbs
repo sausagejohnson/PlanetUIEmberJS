@@ -1,7 +1,10 @@
-{{page-title "Planetui"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="App">
+    <h1>Planet Viewer</h1>
+    <div class="tabs">
+        <LinkTo @route="index" activeClassName="active">List</LinkTo>
+        <LinkTo @route="favourites" activeClassName="active">Favourites</LinkTo>  
+    </div>
+    <div>
+        {{outlet}}
+    </div>
+</div>
