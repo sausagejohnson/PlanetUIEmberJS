@@ -1,6 +1,5 @@
 <div class="list">
-    <PlanetItem>ABC</PlanetItem>
-    <PlanetItem>DEF</PlanetItem>
-    <PlanetItem>GHI</PlanetItem>
-    {{yield}} 
+    {{#each @planets as |planet|}}
+        <PlanetItem>{{planet.name}}</PlanetItem>
+    {{/each}}
 </div>

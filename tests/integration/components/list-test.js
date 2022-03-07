@@ -12,15 +12,15 @@ module('Integration | Component | list', function (hooks) {
 
     await render(hbs`<List />`);
 
-    assert.dom(this.element).hasText('ABC DEF GHI');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
       <List>
-        template block text
+        nothing to yield
       </List>
     `);
 
-    assert.dom(this.element).hasText('ABC DEF GHI template block text');
+    assert.dom(this.element).hasText('');
   });
 });
