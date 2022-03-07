@@ -12,7 +12,7 @@ module('Integration | Component | list', function (hooks) {
 
     await render(hbs`<List />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText('ABC DEF GHI');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | list', function (hooks) {
       </List>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('ABC DEF GHI template block text');
   });
 });

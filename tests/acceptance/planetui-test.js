@@ -16,7 +16,7 @@ module('Acceptance | planetui', function (hooks) {
     await visit('/');
 
     assert.strictEqual(currentURL(), '/');
-    assert.dom('.list').hasText('List');
-    assert.dom('.details').hasText('Details');
+    assert.dom('.list').isVisible();
+    assert.dom('.details').isVisible();
   });
 });
