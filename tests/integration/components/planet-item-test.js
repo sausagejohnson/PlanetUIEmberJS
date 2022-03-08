@@ -17,10 +17,10 @@ module('Integration | Component | planet-item', function (hooks) {
     // Template block usage:
     await render(hbs`
       <PlanetItem>
-        template block text
+        content to display
       </PlanetItem>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('content to display');
   });
 });

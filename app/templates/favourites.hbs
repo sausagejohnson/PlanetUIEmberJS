@@ -1,4 +1,13 @@
 <div class="favourites">
-    <span>No favourites yet.</span> 
+    
+    {{#if @model.favouritePlanets}}
+        {{#each @model.favouritePlanets as |planet|}}
+            <PlanetItem>
+                {{ planet.name }}
+            </PlanetItem>
+        {{/each}}
+    {{else}}
+        <span>No favourites yet.</span> 
+    {{/if}}
     {{yield}}  
 </div>

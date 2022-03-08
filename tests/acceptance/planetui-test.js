@@ -9,7 +9,7 @@ module('Acceptance | planetui', function (hooks) {
     await visit('/favourites');
 
     assert.strictEqual(currentURL(), '/favourites');
-    assert.dom('.favourites').hasText('No favourites yet.');
+    assert.dom('.favourites').hasText('TOI 700 d');
   });
 
   test('visiting /', async function (assert) {
