@@ -1,5 +1,7 @@
 <div class="list">
-    {{#each @planets as |planet|}}
-        <PlanetItem>{{planet.name}}</PlanetItem>
+    {{#each this.getPlanets as |planet|}}
+        <div {{on "click" (fn this.selectedPlanet planet.id)}}>
+            <PlanetItem >{{planet.name}}</PlanetItem>
+        </div>
     {{/each}}
 </div>

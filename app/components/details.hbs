@@ -1,18 +1,18 @@
 <div class="details">
-    {{#if @selectedPlanet }} 
+    {{#if this.selectedPlanet }} 
         <div>
-            <h2>{{@selectedPlanet.name}}</h2>
-            <p>Environment: <span class="environment">{{ @selectedPlanet.environment }}</span></p>
+            <h2>{{this.selectedPlanet.name}}</h2>
+            <p>Environment: <span class="environment">{{ this.selectedPlanet.environment }}</span></p>
             <p>Resources:</p>
             <ul>
-                {{#each @selectedPlanet.resources as |resource|}} 
+                {{#each this.selectedPlanet.resources as |resource|}} 
                     <li key="index" class="resource">{{ resource }}</li> 
                 {{/each}}
             </ul>
         </div>
         <div class="select-favourite">
             <div class="control">
-                <input id="fav-check" type="checkbox" checked={{ @selectedPlanet.isFavourite }} onChange="" />
+                <input id="fav-check" type="checkbox" checked={{ this.selectedPlanet.isFavourite }} onChange="" />
                 <label htmlFor="fav-check">Favourite</label>
             </div>
         </div>
