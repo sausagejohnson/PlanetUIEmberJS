@@ -1,0 +1,10 @@
+{{#if this.selectedFavourites}}
+    {{#each this.selectedFavourites as |planet|}}
+        <PlanetItem>
+            {{ planet.name }}
+        </PlanetItem>
+    {{/each}}
+{{else}}
+    <span>No favourites yet.</span> 
+{{/if}}
+{{yield}}  
