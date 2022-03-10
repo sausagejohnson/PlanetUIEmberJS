@@ -5,7 +5,7 @@ export default class StateService extends Service {
 
   @tracked favourites = [];
 
-  @tracked selectedPlanet = 5; //ID
+  @tracked selectedPlanet = null; //ID
 
   @tracked planets = [
     {

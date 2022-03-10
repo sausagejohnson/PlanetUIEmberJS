@@ -7,13 +7,18 @@ export default class DetailsComponent extends Component {
 
   //@action
   get selectedPlanet() {
-    const isSelectedPlanetFavourited =
-      this.state.favourites.filter((i) => i === this.state.selectedPlanet)
-        .length > 0;
-    let selectedPlanet = this.state.getSelectedPlanet();
-    selectedPlanet.isFavourite = isSelectedPlanetFavourited;
-
-    return selectedPlanet;
+    if (this.state.selectedPlanet){
+        const isSelectedPlanetFavourited =
+        this.state.favourites.filter((i) => i === this.state.selectedPlanet)
+          .length > 0;
+        let selectedPlanet = this.state.getSelectedPlanet();
+        selectedPlanet.isFavourite = isSelectedPlanetFavourited;
+  
+        return selectedPlanet;
+    }
+    
+    return null;
+    
   }
 
   @action toggleFavourite(id, e) {
