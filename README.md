@@ -1,6 +1,8 @@
 # PlanetUI for EmberJS
 
-This README details the re-writing of the PlanetUI demo project using EmberJS.
+This README details my initial experiments using EmberJS. I've chosen to re-write my [PlanetUI demo project](https://github.com/sausagejohnson/PlanetUI) using EmberJS and note the differences between the two which will be the subject of an article to follow in a few days at: http://blog.waynejohnson.net.
+
+The PlanetUI demo project (React version) was covered in the following article: http://blog.waynejohnson.net/reactjs_and_friends
 
 ## Prerequisites
 
@@ -13,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/sausagejohnson/PlanetUIEmberJS` 
 * `cd planetui`
 * `yarn install` (or npm install)
 
@@ -28,11 +30,6 @@ You will need the following things properly installed on your computer.
 * `ember test`
 * `ember test --server`
 
-### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
-
 ### Building
 
 * `ember build` (development)
@@ -40,6 +37,8 @@ You will need the following things properly installed on your computer.
 
 ## Further Reading / Useful Links
 
+* [PlanetUI demo project](https://github.com/sausagejohnson/PlanetUI)
+* [ReactJS and Friends](http://blog.waynejohnson.net/reactjs_and_friends)
 * [ember.js](https://emberjs.com/)
 * [ember-cli](https://cli.emberjs.com/release/)
 * Development Browser Extensions
