@@ -4,6 +4,8 @@ This README details my initial experiments using EmberJS. I've chosen to re-writ
 
 The PlanetUI demo project (React version) was covered in the following article: http://blog.waynejohnson.net/reactjs_and_friends
 
+![PlanetUI in EmberJS](/screenshot.png)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
