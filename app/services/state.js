@@ -3,24 +3,19 @@ import {tracked} from '@glimmer/tracking';
 
 export default class StateService extends Service {
 
-  @tracked selectedIndex = 1;
+  @tracked favourites = [];
 
-  @tracked selectedPlanet = {
-    id: 1,
-    name: 'K2-72e',
-    environment: 'Mild',
-    resources: ['Iron', 'Water', 'Sand'],
-  };
+  @tracked selectedPlanet = 5; //ID
 
   @tracked planets = [
     {
-      id: 0,
+      id: 4,
       name: 'TOI 700 d',
       environment: 'Harsh',
       resources: ['Gold', 'Iron'],
     },
     {
-      id: 1,
+      id: 5,
       name: 'K2-72e',
       environment: 'Mild',
       resources: ['Iron', 'Water', 'Sand'],
@@ -28,8 +23,8 @@ export default class StateService extends Service {
   ];
 
   getSelectedPlanet() {
-    console.log('Getting it');
-    return this.planets[this.selectedIndex];
+    const planet = this.planets.find(p => p.id === this.selectedPlanet);
+    return planet;
   }
 
   getPlanets() {

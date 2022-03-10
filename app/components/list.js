@@ -10,7 +10,7 @@ export default class ListComponent extends Component {
         return this.state.getPlanets();
     };
 
-    @action selectedPlanet(index){
-        this.state.selectedIndex = index;
+    @action selectedPlanet(id){
+        this.state.selectedPlanet = id;
     }
 }
