@@ -5,7 +5,7 @@ export default class StateService extends Service {
 
   @tracked favourites = [];
 
-  @tracked selectedPlanet = null; //ID
+  @tracked selectedPlanetID = null; //ID
 
   @tracked planets = [
     {
@@ -22,8 +22,19 @@ export default class StateService extends Service {
     },
   ];
 
+  @tracked test = 10;
+
+//   setTest(){
+//   }
+
+  setSelectedPlanet(id){
+    this.test = this.test + 5; //TEST: trying to trigger a change in the List component. Works!
+    this.selectedPlanetID = id; //TEST: trying to trigger a change in the Details and List components. Only works in Details.
+    this.planets[1].name = 'changeme!!!!' + Math.random(); //TEST: trying to trigger a change in the List component. Does not work.
+  }
+
   getSelectedPlanet() {
-    const planet = this.planets.find(p => p.id === this.selectedPlanet);
+    const planet = this.planets.find(p => p.id === this.selectedPlanetID);
     return planet;
   }
 

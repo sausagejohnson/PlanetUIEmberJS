@@ -7,9 +7,9 @@ export default class DetailsComponent extends Component {
 
   //@action
   get selectedPlanet() {
-    if (this.state.selectedPlanet){
+    if (this.state.selectedPlanetID){
         const isSelectedPlanetFavourited =
-        this.state.favourites.filter((i) => i === this.state.selectedPlanet)
+        this.state.favourites.filter((i) => i === this.state.selectedPlanetID)
           .length > 0;
         let selectedPlanet = this.state.getSelectedPlanet();
         selectedPlanet.isFavourite = isSelectedPlanetFavourited;
