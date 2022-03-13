@@ -12,8 +12,10 @@
         </div>
         <div class="select-favourite">
             <div class="control">
-                <input id="fav-check" type="checkbox" {{on "change" (fn this.toggleFavourite this.selectedPlanet.id)}} checked={{ this.selectedPlanet.isFavourite }} onChange="" />
-                <label htmlFor="fav-check">Favourite</label>
+                <input id="fav-check" type="checkbox" 
+                checked={{ if this.selectedPlanet.isFavourite "checked" "" }}
+                {{on "change" (fn this.toggleFavourite this.selectedPlanet.id)}} />
+                <label for="fav-check">Favourite</label>
             </div>
         </div>
     {{else}}

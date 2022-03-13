@@ -1,8 +1,6 @@
 <div class="list">
-    !!{{this.getTest}}!!
     {{#each this.getPlanets as |planet|}}
         <div {{on "click" (fn this.selectPlanet planet.id)}}>
-            *{{planet.name}}*{{planet.active}}*
             <PlanetItem @active={{planet.active}} test={{planet.active}} >{{planet.name}}</PlanetItem>
         </div>
     {{/each}}

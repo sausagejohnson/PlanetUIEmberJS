@@ -1,5 +1,7 @@
 import Service from '@ember/service';
 import {tracked} from '@glimmer/tracking';
+import { A } from '@ember/array';
+import { action } from '@ember/object';
 
 export default class StateService extends Service {
 
@@ -7,30 +9,21 @@ export default class StateService extends Service {
 
   @tracked selectedPlanetID = null; //ID
 
-  @tracked planets = [
-    {
-      id: 4,
-      name: 'TOI 700 d',
-      environment: 'Harsh',
-      resources: ['Gold', 'Iron'],
-    },
-    {
-      id: 5,
-      name: 'K2-72e',
-      environment: 'Mild',
-      resources: ['Iron', 'Water', 'Sand'],
-    },
-  ];
+  @tracked planets = A([]);
 
-  @tracked test = 10;
+  @action setSelectedPlanet(id){
+    this.selectedPlanetID = id; 
 
-//   setTest(){
-//   }
+    // This will trigger but is not the way to go.
+    // this.planets = [
+    //   ...this.planets,
+    //   this.planets.slice()
+    // ];
 
-  setSelectedPlanet(id){
-    this.test = this.test + 5; //TEST: trying to trigger a change in the List component. Works!
-    this.selectedPlanetID = id; //TEST: trying to trigger a change in the Details and List components. Only works in Details.
-    this.planets[1].name = 'changeme!!!!' + Math.random(); //TEST: trying to trigger a change in the List component. Does not work.
+    //This works, in fact the only function of
+    //EmberArray that triggers a change at this level.
+    //this.planets.setEach('environment', 'dummy');
+
   }
 
   getSelectedPlanet() {
