@@ -6,21 +6,21 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | favourites', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test('it renders no favourites when no favourites set', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     await render(hbs`<Favourites />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText('No favourites yet.');
 
     // Template block usage:
     await render(hbs`
       <Favourites>
-        template block text
+        Random text
       </Favourites>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('No favourites yet.');
   });
 });
