@@ -13,8 +13,12 @@ module('Integration | Component | favourites', function (hooks) {
     await render(hbs`<Favourites />`);
 
     assert.dom(this.element).hasText('No favourites yet.');
+  });
 
-    // Template block usage:
+  test('it renders no favourites when inner html is passed in', async function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.set('myAction', function(val) { ... });
+
     await render(hbs`
       <Favourites>
         Random text
